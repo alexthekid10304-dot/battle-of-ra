@@ -217,6 +217,20 @@
       "team": "vipers",
       "position": "EDGE RUSH",
       "role": "player"
+    },
+    {
+      "id": "pikiel",
+      "name": "Pikiel",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "jaylen-big-j-moore",
+      "name": "Jaylen “Big J” Moore",
+      "team": "vipers",
+      "position": "",
+      "role": "captain"
     }
   ],
   "running": false
