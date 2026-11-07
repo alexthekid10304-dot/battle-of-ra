@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.p8
+data/game.json
+data/websubs.json
+data/apns-tokens.json
+.DS_Store
+ios/*.xcodeproj/
