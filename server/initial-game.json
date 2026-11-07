@@ -1,0 +1,223 @@
+{
+  "eagles": 0,
+  "vipers": 0,
+  "time": 600,
+  "quarter": 1,
+  "status": "PREGAME",
+  "possession": "",
+  "log": [],
+  "plays": [],
+  "players": [
+    {
+      "id": "yassin",
+      "name": "Yassin",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "chance",
+      "name": "Chance Levverette",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "christopher-rather",
+      "name": "Christopher Rather",
+      "team": "eagles",
+      "position": "CENTER",
+      "role": "player"
+    },
+    {
+      "id": "robby",
+      "name": "Robby Nicholson",
+      "team": "eagles",
+      "position": "",
+      "role": "captain"
+    },
+    {
+      "id": "gradyen",
+      "name": "Gradyen Kitchens",
+      "team": "eagles",
+      "position": "",
+      "role": "captain"
+    },
+    {
+      "id": "jayden-hammett",
+      "name": "Jayden Hammett",
+      "team": "eagles",
+      "position": "QUARTERBACK",
+      "role": "player"
+    },
+    {
+      "id": "liam-nicholson",
+      "name": "Liam Nicholson",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "liam",
+      "name": "Liam Dolehanty",
+      "team": "eagles",
+      "position": "WIDE RECEIVER",
+      "role": "player"
+    },
+    {
+      "id": "yahir",
+      "name": "Yahir",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "clayton",
+      "name": "Clayton",
+      "team": "eagles",
+      "position": "WIDE RECEIVER",
+      "role": "player"
+    },
+    {
+      "id": "hilliard",
+      "name": "Hilliard Shaw",
+      "team": "eagles",
+      "position": "RUNNING BACK",
+      "role": "captain"
+    },
+    {
+      "id": "ben",
+      "name": "Ben",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "caleb",
+      "name": "Caleb Wolk",
+      "team": "eagles",
+      "position": "KICKER",
+      "role": "player"
+    },
+    {
+      "id": "adler",
+      "name": "Adler",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "jacob-grace",
+      "name": "Jacob Grace",
+      "team": "eagles",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "alex",
+      "name": "Alex Toivonen",
+      "team": "vipers",
+      "position": "QUARTERBACK",
+      "role": "captain"
+    },
+    {
+      "id": "leahana-esteve",
+      "name": "Leahana Esteve",
+      "team": "vipers",
+      "position": "FREE SAFETY",
+      "role": "captain"
+    },
+    {
+      "id": "joseph",
+      "name": "Joseph Kovarovic",
+      "team": "vipers",
+      "position": "WIDE RECEIVER",
+      "role": "captain"
+    },
+    {
+      "id": "kennedy-kurhijan",
+      "name": "Kennedy Kurhijan",
+      "team": "vipers",
+      "position": "MIKE",
+      "role": "captain"
+    },
+    {
+      "id": "tj-warren",
+      "name": "Tj Warren",
+      "team": "vipers",
+      "position": "TIGHT END",
+      "role": "player"
+    },
+    {
+      "id": "kaden-lopez",
+      "name": "Kaden Lopez",
+      "team": "vipers",
+      "position": "WIDE RECEIVER",
+      "role": "player"
+    },
+    {
+      "id": "aiden-wright",
+      "name": "Aiden Wright",
+      "team": "vipers",
+      "position": "RUNNING BACK",
+      "role": "player"
+    },
+    {
+      "id": "lincoln",
+      "name": "Lincoln Sokinas",
+      "team": "vipers",
+      "position": "KICKER / WIDE RECEIVER",
+      "role": "player"
+    },
+    {
+      "id": "baylee-winchester",
+      "name": "Baylee Winchester",
+      "team": "vipers",
+      "position": "RUNNING BACK",
+      "role": "player"
+    },
+    {
+      "id": "nathan",
+      "name": "Nathan Turner",
+      "team": "vipers",
+      "position": "CENTER",
+      "role": "player"
+    },
+    {
+      "id": "logan-lindsey",
+      "name": "Logan Lindsey",
+      "team": "vipers",
+      "position": "KICK RETURNER",
+      "role": "player"
+    },
+    {
+      "id": "bryce-berl",
+      "name": "Bryce Berl",
+      "team": "vipers",
+      "position": "WIDE RECEIVER",
+      "role": "player"
+    },
+    {
+      "id": "ethan-will",
+      "name": "Ethan Will",
+      "team": "vipers",
+      "position": "",
+      "role": "player"
+    },
+    {
+      "id": "cj-freeman",
+      "name": "Cj Freeman",
+      "team": "vipers",
+      "position": "CORNER",
+      "role": "player"
+    },
+    {
+      "id": "cam-hall",
+      "name": "Cam Hall",
+      "team": "vipers",
+      "position": "EDGE RUSH",
+      "role": "player"
+    }
+  ],
+  "running": false
+}
