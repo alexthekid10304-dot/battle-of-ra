@@ -118,7 +118,7 @@ function rahConnect(){
  if(!RAH_HOSTED)return;
  rahSSE=new EventSource('/api/events');
  rahSSE.addEventListener('game',()=>{if(!edit)rahLoadRemote()});
- rahSSE.onopen=()=>{$('rahOnlineStatus').textContent='LIVE CONNECTED · Shared scoreboard and play updates'};
+ rahSSE.onopen=()=>{$('rahOnlineStatus').textContent='LIVE CONNECTED · Shared scoreboard and play updates';if(!edit)rahLoadRemote()};
  rahSSE.onerror=()=>{$('rahOnlineStatus').textContent='Reconnecting to live updates…'};
 }
 function rahBase64UrlToBytes(data){const base64=data.replace(/-/g,'+').replace(/_/g,'/');const binary=atob(base64);return Uint8Array.from(binary,c=>c.charCodeAt(0))}
@@ -471,6 +471,10 @@ $('addPlayerForm').addEventListener('submit',event=>{event.preventDefault();if(!
 $('closeProfile').addEventListener('click',closeProfile);$('profileModal').addEventListener('click',event=>{if(event.target.dataset.closeModal)closeProfile()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!$('profileModal').hidden)closeProfile()});
 window.addEventListener('storage',event=>{if(event.key?.startsWith('rah-profile-photo-')){playerCards();if(openPlayerId)showProfileContent();return}if(event.key!==KEY||!event.newValue)return;try{let incoming=JSON.parse(event.newValue);state={...blank(),...incoming,running:false};render();fillPlayers()}catch(_){}});
 fillPenaltyOptions();fillPlayers();updatePlayFields();render();
+// Refresh after a phone wakes, recovers signal, or the live stream misses an event.
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&RAH_HOSTED&&!edit)rahLoadRemote()});
+window.addEventListener('online',()=>{if(!RAH_HOSTED)return;if(edit)rahQueueSave();else rahLoadRemote()});
+setInterval(()=>{if(RAH_HOSTED&&!edit&&!document.hidden)rahLoadRemote()},30000);
 rahInitPush();rahLoadRemote().then(rahConnect);
 if('serviceWorker' in navigator&&RAH_HOSTED)navigator.serviceWorker.register('/sw.js').catch(()=>{});
 })();
