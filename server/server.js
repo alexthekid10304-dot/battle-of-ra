@@ -158,6 +158,11 @@ async function handler(req,res){const url=new URL(req.url,'http://'+req.headers.
  }catch(e){console.error('Request error',e.message);sendJSON(res,e.status||400,{error:e.message})}
 }
 async function main(){await fsp.mkdir(DATA,{recursive:true});const saved=await jsonRead(store('game.json'),null);if(saved){game=saved.game;version=saved.version||0;clockEndsAt=saved.clockEndsAt||0}else{game=await jsonRead(path.join(__dirname,'initial-game.json'),{})}
+ // Add late game-day signings to existing live rosters without changing scores or recorded plays.
+ const gameDayAdditions=[{"id":"pikiel","name":"Pikiel","team":"eagles","position":"","role":"player"},{"id":"jaylen-big-j-moore","name":"Jaylen “Big J” Moore","team":"vipers","position":"","role":"captain"}];
+ if(!Array.isArray(game.players))game.players=[];
+ const newSignings=gameDayAdditions.filter(p=>!game.players.some(existing=>existing.id===p.id));
+ if(newSignings.length){game.players.push(...newSignings);if(saved){version++;await writeJSON('game.json',{version,game,clockEndsAt})}}
  for(const s of await jsonRead(store('websubs.json'),[]))if(s.subscription?.endpoint)webSubscriptions.set(s.subscription.endpoint,s);
  const t=await jsonRead(store('apns-tokens.json'),{});for(const x of t.live||[])liveTokens.add(x);for(const x of t.normal||[])normalTokens.add(x);
  const server=http.createServer(handler);server.listen(PORT,'0.0.0.0',()=>console.log(`[rah] live game: ${PUBLIC_BASE_URL} (port ${PORT})`));
